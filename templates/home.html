@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+    </head>
+    <body>
+        <form action = "/nomeCognome" method = "get">
+            <input type = "text" name = "nome"> inserisci un nome<br>
+            <input type = "text" name = "cognome"> inserisci un cognome<br><br>
+            <input type = "submit" value = "clicca per conoscere i dati"/>
+        </form><br><br>
+        {%for l in lista%}
+            <a href = "/citta/{{l}}"><p>{{l}}</p></a>
+        {%endfor%}
+        <form action = "/gruppo">
+            <input type = "submit" value = "clicca per conoscere il numero di clienti per ogni stato"/>
+        </form><br><br>
+        <form action = "/grande">
+            <input type = "submit" value = "clicca per conoscere lo stato con più clienti"/>
+        </form><br><br>
+        <form action = "/grafici">
+            <input type = "submit" value = "clicca per conoscere i grafici"/>
+        </form><br><br>
+        <form action = "/nulla">
+            <input type = "submit" value = "clicca per conoscere i clienti senza email"/>
+        </form><br><br>
+        <form action = "/email", method="get">
+            <input type = "text" name = "provider"> inserisci un provider (es: @gmail.com)<br><br>
+            <input type = "submit" value = "clicca per conoscere i dati"/>
+        </form>
+    </body>
+</html>
